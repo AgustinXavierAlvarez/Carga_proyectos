@@ -1,6 +1,7 @@
 const express= require('express')
 const app = express();
 const routeProyectos=require('./src/routes/proyectos')
+const routeApiProyectos=require('./src/routes/api/proyectosApi')
 
 app.set('view engine', 'ejs')
 app.set('views',__dirname + '/src/views')
@@ -14,6 +15,7 @@ app.listen (3010, () => {
 })
 
 app.use('/',routeProyectos);
+app.use('/api',routeApiProyectos);
 
 app.use((req, res, next) => {
     res.status(404).render('error',{
