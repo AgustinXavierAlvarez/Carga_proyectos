@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+    <%- include('partials/head') %>
+<body>
+    <main>
+        <div><a href="/" style="text-decoration: none;"><h1 class="retroceso"><</h1></a></div>
+        <section id="section-principal">
+            <h1>Carga del Proyecto</h1>
+            <form action="/proyecto/nuevo" method="POST" enctype="multipart/form-data" >
+                <div class="div_form">
+                    <div class="div_apartado">
+                        <label for="proyect_name">Nombre del Proyecto</label>
+                        <input type="text" name="proy_name">
+                    </div>
+                    <div class="div_apartado">
+                        <label for="proyect_function">Funcion de la Pagina</label>
+                        <textarea name="proyect_function" style="max-width:300px ; max-height: 200px;" id="" type="text"></textarea>
+                    </div>
+                    <div class="div_apartado">
+                        <label for="proyect_logo">Ingrese el logo de la pagina</label>
+                        <input type="file" name="proyect_logo" multiple>
+                    </div>
+                    <div class="div_apartado">
+                        <label for="proyect_img">Ingrese foto de presentacion</label>
+                        <input type="file" name="proyect_img" id="" multiple>
+                    </div>
+                    <div class="div_apartado">
+                        <label for="proyect_date">Ingrese el dia de creacion</label>
+                        <input type="date" name="proyect_date" id=""> 
+                    </div>
+                </div>
+                <button type="submit">Crear</button>
+            </form>
+        </section>
+    </main>
+</body>
+</html>
